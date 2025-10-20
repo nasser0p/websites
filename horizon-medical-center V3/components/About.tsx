@@ -1,0 +1,71 @@
+import React, { useContext } from 'react';
+import { LanguageContext } from '../App';
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import useTilt from '../hooks/useTilt';
+import { StaffMember, TextContent } from '../types';
+
+interface AboutProps {
+  staff: StaffMember[];
+}
+
+const StaffCard: React.FC<{ staffMember: StaffMember, text: TextContent, isVisible: boolean, index: number }> = ({ staffMember, text, isVisible, index }) => {
+    const { ref, style, handleMouseMove, handleMouseLeave } = useTilt();
+    return (
+        <div 
+            ref={ref}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{ ...style, animationDelay: `${400 + index * 100}ms` }}
+            className={`bg-white p-8 rounded-lg shadow-xl flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left rtl:sm:text-right tilt-card hover:shadow-2xl hover:shadow-brand-teal/20 tappable ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+        >
+            <img className="h-40 w-40 rounded-full object-cover shadow-lg shrink-0" src={staffMember.imageUrl} alt={staffMember.name} />
+            <div>
+                <h3 className="text-2xl font-serif font-bold text-brand-dark">{staffMember.name}</h3>
+                <p className="text-brand-teal font-semibold mt-1">{text[staffMember.titleKey as keyof typeof text]}</p>
+                <p className="mt-3 text-gray-600">{text[staffMember.bioKey as keyof typeof text]}</p>
+            </div>
+        </div>
+    );
+};
+
+
+const About: React.FC<AboutProps> = ({ staff }) => {
+  const langContext = useContext(LanguageContext);
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
+  if (!langContext) return null;
+  const { text } = langContext;
+
+  return (
+    <section id="about" className="py-20 md:py-28 bg-white" ref={ref}>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className={`${isVisible ? 'animate-fade-in-up' : 'opacity-0'} text-center max-w-3xl mx-auto`}>
+          <h2 className="text-4xl font-serif font-bold sm:text-5xl bg-gradient-to-r from-brand-dark via-brand-teal to-gray-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer">
+            {text.aboutTitle}
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">{text.aboutSubtitle}</p>
+        </div>
+        
+        <div className={`mt-16 max-w-4xl mx-auto bg-gray-50 p-10 rounded-lg shadow-xl text-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '200ms' }}>
+            <h3 className="text-3xl font-serif font-bold text-brand-dark">{text.clinicPhilosophy}</h3>
+            <div className="w-20 h-1 bg-brand-gold mx-auto my-6"></div>
+            <p className="text-gray-700 leading-relaxed">{text.clinicPhilosophyText}</p>
+        </div>
+
+        <div className="mt-20 grid gap-12 md:grid-cols-2 max-w-5xl mx-auto">
+          {staff.map((staffMember, index) => (
+            <StaffCard 
+              key={staffMember.id}
+              staffMember={staffMember}
+              text={text}
+              isVisible={isVisible}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
