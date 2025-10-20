@@ -75,9 +75,9 @@
     "clinicPhilosophy": "Our Philosophy",
     "clinicPhilosophyText": "At Horizon Medical Center, our philosophy is simple: to provide exceptional dental care in a warm, compassionate, and modern environment. We believe in building lifelong relationships with our patients based on trust, transparency, and a shared commitment to oral health. Your comfort and well-being are our highest priorities.",
     "drAhmedTitle": "Lead Dentist",
-    "drAhmedBio": "With over 15 years of experience, Dr. Ahmed is a leader in cosmetic and restorative dentistry, dedicated to creating beautiful, healthy smiles.",
+    "drAhmedBio": "With over 15 years of experience, Dr. Nihal is a leader in cosmetic and restorative dentistry, dedicated to creating beautiful, healthy smiles.",
     "drFatimaTitle": "Orthodontist",
-    "drFatimaBio": "Dr. Fatima specializes in modern orthodontic solutions, helping patients of all ages achieve perfectly aligned teeth and a confident smile.",
+    "drFatimaBio": "Dr. Iman specializes in modern orthodontic solutions, helping patients of all ages achieve perfectly aligned teeth and a confident smile.",
     "galleryTitle": "Smile Transformations",
     "gallerySubtitle": "See the stunning results we've achieved for our patients.",
     "treatmentVeneers": "Porcelain Veneers",
@@ -246,9 +246,9 @@
     "clinicPhilosophy": "فلسفتنا",
     "clinicPhilosophyText": "في مركز الأفق الطبي، فلسفتنا بسيطة: تقديم رعاية أسنان استثنائية في بيئة دافئة ورحيمة وعصرية. نؤمن ببناء علاقات مدى الحياة مع مرضانا على أساس الثقة والشفافية والالتزام المشترك بصحة الفم. راحتك ورفاهيتك هي أسمى أولوياتنا.",
     "drAhmedTitle": "طبيب أسنان رئيسي",
-    "drAhmedBio": "بخبرة تزيد عن 15 عامًا، يعد الدكتور أحمد رائدًا في طب الأسنان التجميلي والترميمي، مكرسًا لخلق ابتسامسات جميلة وصحية.",
+    "drAhmedBio": "بخبرة تزيد عن 15 عامًا، تعد الدكتورة نهال رائدة في طب الأسنان التجميلي والترميمي، مكرسة لخلق ابتسامات جميلة وصحية.",
     "drFatimaTitle": "أخصائية تقويم الأسنان",
-    "drFatimaBio": "تتخصص الدكتورة فاطمة في حلول تقويم الأسنان الحديثة، مما يساعد المرضى من جميع الأعمار على تحقيق أسنان مصطفة تمامًا وابتسامة واثقة.",
+    "drFatimaBio": "تتخصص الدكتورة إيمان في حلول تقويم الأسنان الحديثة، مما يساعد المرضى من جميع الأعمار على تحقيق أسنان مصطفة تمامًا وابتسامة واثقة.",
     "galleryTitle": "تحولات الابتسامة",
     "gallerySubtitle": "شاهد النتائج المذهلة التي حققناها لمرضانا.",
     "treatmentVeneers": "قشور البورسلين",
@@ -427,8 +427,8 @@
       { "id": 3, "name": "Aaisha rashid", "quoteKey": "review3", "rating": 5, "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocIJFyo05KB_D8pky_E_CLaO-cgl6aXthGF2ltjKNOGC-HnNYg=w36-h36-p-rp-mo-br100" }
     ],
     "staff": [
-      { "id": 1, "name": "Dr. saleem", "titleKey": "drAhmedTitle", "bioKey": "drAhmedBio", "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760185525/blank-profile-picture-973460_960_720_rspsec.webp" },
-      { "id": 2, "name": "Dr. Laila", "titleKey": "drFatimaTitle", "bioKey": "drFatimaBio", "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760185525/blank-profile-picture-973460_960_720_rspsec.webp" }
+      { "id": 1, "name": "Dr. Nihal", "titleKey": "drAhmedTitle", "bioKey": "drAhmedBio", "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760185525/blank-profile-picture-973460_960_720_rspsec.webp" },
+      { "id": 2, "name": "Dr. Iman", "titleKey": "drFatimaTitle", "bioKey": "drFatimaBio", "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760185525/blank-profile-picture-973460_960_720_rspsec.webp" }
     ],
     "gallery": [
         { "id": 1, "beforeImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026159/Screenshot_2025-10-09_182029_qeucgt.png", "afterImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026160/Screenshot_2025-10-09_182205_qardnl.png", "treatmentKey": "IMAX Smile" },
