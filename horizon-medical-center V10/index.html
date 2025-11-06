@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Horizon Medical Center offers comprehensive and compassionate dental care. Our expert team uses the latest technology to ensure you have a healthy, beautiful smile." />
+    <title>Horizon Medical Center</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'clinic-dark': '#212529',
+              'clinic-deep-blue': '#003366',
+              'clinic-secondary': '#17A2B8',
+              'clinic-gray': '#6C757D',
+              'clinic-light': '#F8F9FA',
+              'clinic-primary': '#007BFF',
+            },
+            fontFamily: {
+              'sans': ['Poppins', 'Cairo', 'sans-serif'],
+              'serif': ['Poppins', '"Cairo"', 'serif'],
+            },
+            keyframes: {
+              'subtle-pulse': {
+                '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(0, 123, 255, 0.5)' },
+                '50%': { transform: 'scale(1.03)', boxShadow: '0 0 20px 10px rgba(0, 123, 255, 0)' },
+              },
+              'fade-in-up': {
+                  '0%': { opacity: '0', transform: 'translateY(20px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'subtle-pulse': 'subtle-pulse 4s ease-in-out infinite',
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+            },
+            boxShadow: {
+              'glow-primary': '0 0 25px -5px rgba(0, 123, 255, 0.4), 0 0 15px -5px rgba(0, 123, 255, 0.2)',
+            },
+            backgroundImage: {
+              'gradient-subtle': 'linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%)',
+            }
+          },
+        },
+        plugins: [
+          function({ addUtilities, theme }) {
+            addUtilities({
+              '.transform-style-3d': {
+                'transform-style': 'preserve-3d',
+              },
+              '.perspective-1000': {
+                'perspective': '1000px',
+              },
+              '.backface-hidden': {
+                'backface-visibility': 'hidden',
+              },
+              '.text-shadow-md': {
+                'text-shadow': '0 2px 4px rgba(0, 0, 0, 0.3)',
+              },
+            })
+          }
+        ]
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@6"
+  }
+}
+</script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
